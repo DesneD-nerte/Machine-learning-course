@@ -1,10 +1,10 @@
 import math
 
 try:
-      n = input("Введите номер варианта: ")
+      n = int(input("Введите номер варианта: "))
 
-      x = 2 * int(n)
-      t = 3.5 * int(n)
+      x = 2 * n
+      t = 3.5 * n
 
       z = ((9 * math.pi * t + 10 * math.cos(x)) / (math.sqrt(t) - abs(math.sin(t)))) * math.e ** x
 
