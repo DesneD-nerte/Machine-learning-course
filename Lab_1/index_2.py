@@ -19,12 +19,16 @@ age: int = int(input("Введите свой возраст: "))
 weight: float = float(input("Введите свой вес: "))
 height: float = float(input("Введите свой рост (в сантиметрах): ")) / 100
 
-# Подсчет индекса и категории происходит без округления для точного подсчета. Округляем только при демонстрации пользователю
-bmi: float = weight / height ** 2
-category_description = found_bmi_description_by_age(bmi, age)
+if(age <= 0 or weight <= 0 or height <= 0):
+    print("Некорректные входные данные")
+else:
+    # Подсчет индекса и категории происходит без округления для точного подсчета. Округляем только при демонстрации пользователю
+    bmi: float = weight / height ** 2
+    category_description = found_bmi_description_by_age(bmi, age)
 
-print(f'Возраст: {age}\n'
-      f'Вес: {weight}\n'
-      f'Рост: {height}\n'
-      f'Индекс массы тела: {round(bmi, 2)}\n'
-      f'Категория: {category_description}')
+    print(f'Возраст: {age}\n'
+          f'Вес: {weight}\n'
+          f'Рост: {height}\n'
+          f'Индекс массы тела: {round(bmi, 2)}\n'
+          f'Категория: {category_description}')
+
