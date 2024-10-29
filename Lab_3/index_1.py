@@ -13,8 +13,8 @@ print("Самая частая причина выбора школы: ", max_re
 no_education_count = data[(data['Medu'] == 0) & (data['Fedu'] == 0)].shape[0]
 print("Количество студентов, с родителями без образования: ", no_education_count)
 
-only_one_education_count = data[(data['Medu'] == 0) | (data['Fedu'] == 0)]
-print("Количество студентов, у которых хотябы один родитель имеет образование: ", only_one_education_count)
+only_one_education_count = data[(data['Medu'] == 0) | (data['Fedu'] == 0)].shape[0]
+print("Количество студентов, у которых хотябы один родитель не имеет образование: ", only_one_education_count)
 
 # 3
 lowest_age_from_Mousinho_school = data[data["school"] == "MS"]["age"].min()
